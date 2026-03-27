@@ -1,0 +1,56 @@
+Model: "functional_4"
+                                                                                        
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+                                                                                        
+│ input_layer_5 (InputLayer)           │ (None, 224, 224, 3)         │               0 │
+                                                                                        
+│ random_translation                   │ (None, 224, 224, 3)         │               0 │
+│ (RandomTranslation)                  │                             │                 │
+                                                                                        
+│ random_zoom (RandomZoom)             │ (None, 224, 224, 3)         │               0 │
+                                                                                        
+│ random_flip (RandomFlip)             │ (None, 224, 224, 3)         │               0 │
+                                                                                        
+│ random_rotation (RandomRotation)     │ (None, 224, 224, 3)         │               0 │
+                                                                                        
+│ random_contrast (RandomContrast)     │ (None, 224, 224, 3)         │               0 │
+                                                                                        
+│ rescaling_5 (Rescaling)              │ (None, 224, 224, 3)         │               0 │
+                                                                                        
+│ batch_normalization_9                │ (None, 224, 224, 3)         │              12 │
+│ (BatchNormalization)                 │                             │                 │
+                                                                                        
+│ conv2d_19 (Conv2D)                   │ (None, 224, 224, 32)        │             864 │
+                                                                                        
+│ max_pooling2d_18 (MaxPooling2D)      │ (None, 112, 112, 32)        │               0 │
+                                                                                        
+│ conv2d_20 (Conv2D)                   │ (None, 112, 112, 64)        │          18,432 │
+                                                                                        
+│ max_pooling2d_19 (MaxPooling2D)      │ (None, 56, 56, 64)          │               0 │
+                                                                                        
+│ conv2d_21 (Conv2D)                   │ (None, 56, 56, 128)         │          73,728 │
+                                                                                        
+│ max_pooling2d_20 (MaxPooling2D)      │ (None, 28, 28, 128)         │               0 │
+                                                                                        
+│ conv2d_22 (Conv2D)                   │ (None, 28, 28, 256)         │         294,912 │
+                                                                                        
+│ batch_normalization_10               │ (None, 28, 28, 256)         │           1,024 │
+│ (BatchNormalization)                 │                             │                 │
+                                                                                        
+│ activation_3 (Activation)            │ (None, 28, 28, 256)         │               0 │
+                                                                                        
+│ max_pooling2d_21 (MaxPooling2D)      │ (None, 14, 14, 256)         │               0 │
+                                                                                        
+│ global_average_pooling2d_4           │ (None, 256)                 │               0 │
+│ (GlobalAveragePooling2D)             │                             │                 │
+                                                                                        
+│ dense_8 (Dense)                      │ (None, 512)                 │         131,584 │
+                                                                                        
+│ dropout_4 (Dropout)                  │ (None, 512)                 │               0 │
+                                                                                        
+│ dense_9 (Dense)                      │ (None, 30)                  │          15,390 │
+                                                                                        
+ Total params: 535,948 (2.04 MB)
+ Trainable params: 535,428 (2.04 MB)
+ Non-trainable params: 518 (2.02 KB)
+ Optimizer params: 2 (12.00 B)
