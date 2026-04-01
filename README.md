@@ -70,7 +70,12 @@ streamlit run "./src/4 - streamlit/app2.py"
     │                         
     ├── references         <- Data dictionaries, manuals, links, and all other explanatory materials.
     ├── pyproject.toml    
-    ├── uv.lock     
+    ├── uv.lock    
+    ├── .gitignore         <- fichiers à ignorer quand on met sous github (comme models)
+    ├── .dockerignore      <- fichiers à ignorer quand on constitue le conteneur Docker
+    ├── Dokerfile          <- Constitution du conteneur streamlit_app
+    ├── docker-compose.yml <- lancement des conteneurs streamlit et nginx
+    ├── nginx.conf         <- configuration nginx 
     │
     ├── reports            <- Reports for the project
     │   ├── 2025-08-31_DS_Mushroom_Rapport_1_Data_explo_Dataviz_Prepocess_V3.docx
