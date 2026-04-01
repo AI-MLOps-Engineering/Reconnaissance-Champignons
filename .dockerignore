@@ -1,0 +1,12 @@
+models/
+data/
+notebooks/
+__pycache__/
+*.pkl
+*.csv
+*.ipynb
+*.zip
+*.jpg
+*.png
+*.jpeg
+.git/
